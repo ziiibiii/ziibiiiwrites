@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZB Technical Writer</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="author" content="Your Name">
+  <title>Your Name | Technical Writer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- Header with navigation bar-->
-  
   <header>
-    <h1>My Portfolio</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <div class="logo">
+        <h1>Your Name</h1>
+        <p>Technical Writer</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#writing">Writing Samples</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-<!-- Main content section -->
-  
-  <section id="home">
-    <div class="container">
-      <h1>Welcome to my portfolio</h1>
-      <p>I help communicate about tech</p>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hello, I'm Your Name</h2>
+      <p>Experienced Technical Writer specializing in clear and concise documentation for software, APIs, and technical processes.</p>
+      <a href="#contact" class="cta-button">Get in Touch</a>
     </div>
   </section>
 
-<!--Footer-->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>With over [X] years of experience in technical writing, I craft user-friendly documentation, manuals, API documentation, and more. I have a deep understanding of both the technical aspects and the importance of clear communication in helping users understand complex systems and tools.</p>
+  </section>
+
+  <section id="writing" class="writing">
+    <h2>Writing Samples</h2>
+    <div class="writing-cards">
+      <div class="writing-card">
+        <h3>API Documentation for XYZ Tool</h3>
+        <p>A comprehensive guide to using XYZ's API, including authentication, endpoints, and sample requests.</p>
+        <a href="link-to-api-docs" class="writing-link">View Sample</a>
+      </div>
+      <div class="writing-card">
+        <h3>Getting Started with ABC Framework</h3>
+        <p>A step-by-step tutorial for beginners to get started with ABC, with code examples and troubleshooting tips.</p>
+        <a href="link-to-tutorial" class="writing-link">View Sample</a>
+      </div>
+      <div class="writing-card">
+        <h3>Technical Whitepaper on Microservices Architecture</h3>
+        <p>In-depth analysis and explanation of microservices, including use cases and implementation strategies.</p>
+        <a href="link-to-whitepaper" class="writing-link">View Sample</a>
+      </div>
+      <!-- Add more writing samples as needed -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 ZB. All rights reserved.</p>
+    <p>&copy; 2025 Your Name | Technical Writer</p>
   </footer>
 
-  <script src="scripts.js"></script>
-  
-  </body>
-
+  <script src="script.js"></script>
+</body>
 </html>
-  
