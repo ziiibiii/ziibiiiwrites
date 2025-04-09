@@ -75,21 +75,32 @@ form {
   flex-direction: column;
 }
 
-form label, form input, form textarea, form button {
+form label, 
+form input, 
+form textarea, 
+form button {
   margin-bottom: 1rem;
 }
 
-form input, form textarea {
+form input, 
+form textarea {
   padding: 0.5rem;
   border: 1px solid #ddd;
 }
 
 form button {
-  background: #333;
-  color: white;
-  padding: 0.5rem;
-  border: none;
-  cursor: pointer;
+  background: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  padding: 0.5rem; /* Button padding */
+  border: none; /* Remove border */
+  cursor: pointer; /* Cursor change on hover */
+  font-size: 1rem; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
 @media (max-width: 768px) {
