@@ -1,20 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let carouselItems = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
+// Simple Carousel Functionality
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
 
-    function showNextItem() {
-        currentIndex++;
-        if (currentIndex >= carouselItems.length) {
-            currentIndex = 0;
-        }
-        updateCarousel();
-    }
+function showNextItem() {
+    items[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex + 1) % items.length;
+    items[currentIndex].style.display = 'block';
+}
 
-    function updateCarousel() {
-        carouselItems.forEach((item, index) => {
-            item.style.transform = `translateX(-${currentIndex * 100}%)`;
-        });
-    }
-
-    setInterval(showNextItem, 3000); // Change item every 3 seconds
-});
+setInterval(showNextItem, 3000); // Change project every 3 seconds
