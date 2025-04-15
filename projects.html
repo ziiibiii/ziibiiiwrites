@@ -2,34 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects|ZB</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="simple-header">
-        <div class="container">
-            <h1>Projects</h1>
-            <nav class="main.nav">
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="projects.html">Projects</a>
-              <a href="writing.html">Writing</a>
-              <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="section">
-        <div class="container">
-            <div class="card">
-        <h3>Project Title</h3>
-        <p>Description of what it does, tech used, your role etc.</p>
-        <a href="#">View on Github</a>
-      </div>
-       <!-- Repeat for more projects -->
-    </div>
-</section>
+    <section id="projects">
+        <h1>My Projects</h1>
+        <div class="carousel-container">
+            <div id="projectCarousel" class="carousel-slide">
+                <div class="carousel-item">
+                    <img src="assets/images/project1.jpg" alt="Project 1">
+                    <p>Project 1 Description</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/project2.jpg" alt="Project 2">
+                    <p>Project 2 Description</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/project3.jpg" alt="Project 3">
+                    <p>Project 3 Description</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/project4.jpg" alt="Project 4">
+                    <p>Project 4 Description</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/project5.jpg" alt="Project 5">
+                    <p>Project 5 Description</p>
+                </div>
+            </div>
+            <button id="projectPrev">Prev</button>
+            <button id="projectNext">Next</button>
+        </div>
+    </section>
 
-<footer><div class="container">&copy; 2025 ZB</div></footer>
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
