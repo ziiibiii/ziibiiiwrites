@@ -2,34 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Writing|ZB</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Writing</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="simple-header">
-        <div class="container">
-            <h1>Technical Writing</h1>
-            <nav class="main.nav">
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="projects.html">Projects</a>
-              <a href="writing.html">Writing</a>
-              <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="section light">
-        <div class="container">
-            <div class="card">
-        <h3>Article Title</h3>
-        <p>Summary of the piece, where it was published, etc.</p>
-        <a href="#">Read article</a>
-      </div>
-       <!-- Repeat for more projects -->
-    </div>
-</section>
+    <section id="writing">
+        <h1>My Writing</h1>
+        <div class="carousel-container">
+            <div id="writingCarousel" class="carousel-slide">
+                <div class="writing-slide">
+                    <img src="assets/images/writing1.jpg" alt="Writing 1">
+                    <p>Writing Sample 1 Description</p>
+                </div>
+                <div class="writing-slide">
+                    <img src="assets/images/writing2.jpg" alt="Writing 2">
+                    <p>Writing Sample 2 Description</p>
+                </div>
+                <div class="writing-slide">
+                    <img src="assets/images/writing3.jpg" alt="Writing 3">
+                    <p>Writing Sample 3 Description</p>
+                </div>
+                <div class="writing-slide">
+                    <img src="assets/images/writing4.jpg" alt="Writing 4">
+                    <p>Writing Sample 4 Description</p>
+                </div>
+                <div class="writing-slide">
+                    <img src="assets/images/writing5.jpg" alt="Writing 5">
+                    <p>Writing Sample 5 Description</p>
+                </div>
+            </div>
+            <button id="writingPrev">Prev</button>
+            <button id="writingNext">Next</button>
+        </div>
+    </section>
 
-<footer><div class="container">&copy; 2025 ZB</div></footer>
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
