@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact|ZB</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="simple-header">
-        <div class="container">
-            <h1>Contact</h1>
-            <nav class="main.nav">
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="projects.html">Projects</a>
-              <a href="writing.html">Writing</a>
-              <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="section">
-        <div class="container">
-         <p>Email: <a href="mailto:eviterniti@gmail.com">eviterniti@gmail.com</a></p>
-        </div>
-    </section>
-
-<footer><div class="container">&copy; 2025 ZB</div></footer>
-</body>
-</html>
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>If you want to get in touch, please reach out!</p>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="
