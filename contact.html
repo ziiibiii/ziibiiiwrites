@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="[Your Name] - Contact">
+    <title>Contact - [Your Name]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <nav>
             <ul>
@@ -20,15 +23,21 @@
         </nav>
     </header>
 
+    <!-- Contact Section -->
     <section id="contact">
-        <h1>Contact Me</h1>
-        <p>If you want to get in touch, please reach out!</p>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Your Message:</label><br>
-            <textarea id="message" name="
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
