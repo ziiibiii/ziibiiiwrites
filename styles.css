@@ -1,9 +1,17 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f5f5f5;  /* Light background */
+    color: #333;  /* Dark text */
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;  /* For headers, Lora gives a nice contrast */
+    font-weight: 700;
+    color: #333;
 }
 
 header {
