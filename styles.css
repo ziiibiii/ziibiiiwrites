@@ -43,7 +43,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Home Section */
+/* Hero Section */
 #home {
     background-color: #3498db;
     color: #fff;
@@ -78,39 +78,6 @@ header nav ul li a:hover {
 #home .hero-content button:hover {
     background-color: #2980b9;
     color: white;
-}
-
-/* About Preview Section */
-#about-preview {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-}
-
-#about-preview h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-#about-preview p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-#about-preview .button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 35px;
-    font-size: 1.1rem;
-    border-radius: 25px;
-    text-decoration: none;
-}
-
-#about-preview .button:hover {
-    background-color: #2980b9;
 }
 
 /* About Section */
