@@ -1,78 +1,3 @@
-/* Hero Section */
-#home {
-    background-image: url('https://source.unsplash.com/1600x900/?nature,technology'); /* Replace with your desired image */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 150px 20px;
-    position: relative;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px);
-}
-
-/* About Preview Section */
-#about-preview {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: -50px;
-}
-
-#about-preview h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-}
-
-#about-preview p {
-    font-size: 1.2rem;
-    color: #777;
-    margin-bottom: 30px;
-}
-
-#about-preview .button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-#about-preview .button:hover {
-    background-color: #2980b9;
-}
-
 /* General Styles */
 * {
     margin: 0;
@@ -88,17 +13,23 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Navigation */
+/* Header Styles */
+header {
+    background-color: #3498db;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 header nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    background-color: #3498db;
-    padding: 15px;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 header nav ul li a {
@@ -112,22 +43,285 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Button Styles */
-button, .button {
+/* Home Section */
+#home {
+    background-color: #3498db;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#home .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#home .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#home .hero-content button {
+    background-color: #fff;
+    color: #3498db;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#home .hero-content button:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* About Preview Section */
+#about-preview {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#about-preview h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about-preview p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#about-preview .button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+#about-preview .button:hover {
+    background-color: #2980b9;
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+#about .about-photo {
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+#about .about-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about .about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#about .about-text .button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+#about .about-text .button:hover {
+    background-color: #2980b9;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Writing Section */
+#writing {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#writing h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.writing-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.writing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.writing-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.writing-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+.writing-card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.writing-card .button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.writing-card .button:hover {
+    background-color: #2980b9;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#contact form button {
     background-color: #3498db;
     color: white;
     padding: 12px 30px;
     font-size: 1.2rem;
     border-radius: 25px;
-    text-transform: uppercase;
-    border: none;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
     transition: all 0.3s ease;
 }
 
-button:hover, .button:hover {
+#contact form button:hover {
     background-color: #2980b9;
-    transform: translateY(-3px);
 }
 
 /* Footer */
@@ -136,5 +330,5 @@ footer {
     padding: 20px;
     background-color: #3498db;
     color: white;
+    margin-top: 40px;
 }
-
