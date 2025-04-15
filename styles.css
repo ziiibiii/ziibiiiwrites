@@ -1,51 +1,74 @@
-/* Global Styles (same as above, add all the CSS we discussed before) */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #f1f1f1;
+/* Hero Section */
+#home {
+    background-image: url('https://source.unsplash.com/1600x900/?nature,technology'); /* Replace with your desired image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* About Preview Section */
+#about-preview {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+#about-preview h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #333;
 }
 
-header {
-    background-color: #111;
-    color: #fff;
-    padding: 20px;
+#about-preview p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 30px;
 }
 
-header nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-}
-
-header nav ul li a {
+#about-preview .button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: #3498db;
+#about-preview .button:hover {
+    background-color: #2980b9;
 }
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 30px;
-    text-align: center;
-}
-
-section {
-    padding: 80px 20px;
-    margin: 0 auto;
-    max-width: 1100px;
-    background-color: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    margin-bottom: 80px;
-}
-
-/* Add remaining CSS styling from above */
