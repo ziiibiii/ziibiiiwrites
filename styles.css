@@ -7,17 +7,16 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Ensure containers take up full width and height */
-.container, section {
-    width: 100%;
-    min-height: 100vh; /* Ensures sections take at least full height of the viewport */
+/* Flexbox layout to ensure footer stays at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least full viewport height */
 }
 
-/* Body and main content */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+/* Main content will take the remaining space */
+main {
+    flex: 1;
 }
 
 /* Full-width header */
@@ -171,6 +170,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
+    margin-top: auto; /* Ensures footer stays at the bottom */
 }
 
 footer p {
