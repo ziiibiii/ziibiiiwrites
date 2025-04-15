@@ -1,30 +1,95 @@
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main-nav a {
-    color: white;
+header {
+    background-color: #333;
     padding: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
     text-decoration: none;
 }
 
-.main-nav a:hover {
-    background-color: #555;
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
-/* Mobile View */
-@media (max-width:768px) {
-    .main-nav {
-        flex-direction: column;
-        align-items: flex-start;
+/* Mobile first responsive design */
+@media (max-width: 600px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 
-    .main-nav a {
-        width: 100%
-        border-top: 1px solid #444;
+    section {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
     }
 }
+
+/* Carousels */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item, .writing-slide {
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.carousel-item img, .writing-slide img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#projectPrev, #writingPrev {
+    left: 10px
