@@ -1,11 +1,32 @@
-// Simple Carousel Functionality
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
+document.addEventListener('DOMContentLoaded', function() {
+    let currentIndex = 0;
+    const projectCarousel = document.getElementById('projectCarousel');
+    const writingCarousel = document.getElementById('writingCarousel');
+    
+    // Project carousel navigation
+    function moveCarousel(direction) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
 
-function showNextItem() {
-    items[currentIndex].style.display = 'none';
-    currentIndex = (currentIndex + 1) % items.length;
-    items[currentIndex].style.display = 'block';
-}
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        const offset = -currentIndex * 100;  // Move slide by 100%
+        projectCarousel.style.transform = `translateX(${offset}%)`;
+    }
 
-setInterval(showNextItem, 3000); // Change project every 3 seconds
+    // Writing carousel navigation
+    function moveWritingCarousel(direction) {
+        const slides = document.querySelectorAll('.writing-slide');
+        const totalSlides = slides.length;
+
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        const offset = -currentIndex * 100;  // Move slide by 100%
+        writingCarousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Event listeners for carousel buttons
+    document.getElementById('projectPrev').addEventListener('click', () => moveCarousel(-1));
+    document.getElementById('projectNext').addEventListener('click', () => moveCarousel(1));
+
+    document.getElementById('writingPrev').addEventListener('click', () => moveWritingCarousel(-1));
+    document.getElementById('writingNext').addEventListener('click', () => moveWritingCarousel(1));
+});
