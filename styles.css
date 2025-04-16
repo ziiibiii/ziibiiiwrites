@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    text-align: center; /* Ensure all text is centered globally */
 }
 
 /* Flexbox layout to ensure footer stays at the bottom */
@@ -12,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensures the body takes at least full viewport height */
+    justify-content: flex-start; /* Align the content properly */
 }
 
 /* Main content will take the remaining space */
@@ -51,13 +53,41 @@ nav ul li a:hover {
     color: #ff6347;
 }
 
+/* Home page specific styles */
+#home {
+    text-align: center; /* Ensure text is centered on the home page */
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#home .btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#home .btn:hover {
+    background-color: #e5533d;
+}
+
 /* About Me Section - Centered Text */
 #about {
     display: flex;
     justify-content: center; /* Centers content horizontally */
     align-items: center;     /* Centers content vertically */
     min-height: 100vh;       /* Makes sure the container takes up at least the full height of the viewport */
-    text-align: center;      /* Centers the text inside the container */
+    text-align: center;      /* Ensures text is centered */
     padding: 40px;
     background-color: #f9f9f9; /* Optional: change to your desired background */
 }
