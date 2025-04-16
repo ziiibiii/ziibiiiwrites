@@ -177,16 +177,50 @@ footer p {
     margin: 0;
 }
 
+/* About Me Section - Centered Text */
+#about {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     /* Centers content vertically */
+    min-height: 100vh;       /* Makes sure the container takes up at least the full height of the viewport */
+    text-align: center;      /* Centers the text inside the container */
+    padding: 40px;
+    background-color: #f9f9f9; /* Optional: change to your desired background */
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     header {
         padding: 10px;
     }
     
+    #about {
+        padding: 20px;
+    }
+
+    #about h2 {
+        font-size: 28px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
     nav ul {
         display: block;
     }
-    
+
     nav ul li {
         margin-bottom: 10px;
     }
