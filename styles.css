@@ -55,7 +55,6 @@ nav ul li a:hover {
 /* Main content section styling */
 section {
     padding: 40px;
-    text-align: center; /* Center content within sections */
 }
 
 /* Home page specific styles */
@@ -77,9 +76,10 @@ section {
     padding: 10px 20px;
     background-color: #ff6347;
     color: white;
-    text-decoration: none;
+    text-decoration: none !important; /* Removes underline */
     border-radius: 5px;
     font-weight: bold;
+    display: inline-block;
 }
 
 #home .btn:hover {
@@ -91,12 +91,13 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px;
-    padding: 20px 0;
-    justify-items: center; /* Centers cards horizontally */
-    align-items: center; /* Centers cards vertically */
+    justify-items: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
     margin: 0 auto; /* Centers the grid itself */
-    width: 100%; /* Ensures grid spans full width */
+    padding: 0;
+    width: 100%; /* Ensure full-width layout */
     text-align: unset; /* Clears inherited text alignment */
+    box-sizing: border-box; /* Prevents sizing issues */
 }
 
 /* Styling for Project and Writing Cards */
@@ -107,8 +108,8 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     max-width: 300px;
-    margin: 0; /* Prevents extra centering */
     text-align: center;
+    margin: 0; /* Prevent extra centering */
 }
 
 .project-card:hover, .writing-card:hover {
@@ -139,7 +140,40 @@ section {
     color: #666;
 }
 
-/* Button Styling */
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Ensures consistent layout */
+    margin: 0 auto;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+#contact form textarea {
+    resize: none;
+}
+
+#contact form button[type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Ensure consistent font on all buttons */
 button, .btn {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
