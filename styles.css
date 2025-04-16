@@ -5,7 +5,7 @@ html, body {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    text-align: center; /* Ensure all text is centered globally */
+    font-family: 'Poppins', sans-serif; /* Use the Google Font */
 }
 
 /* Flexbox layout to ensure footer stays at the bottom */
@@ -13,18 +13,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensures the body takes at least full viewport height */
-    justify-content: flex-start; /* Align the content properly */
 }
 
-/* Main content will take the remaining space */
-main {
-    flex: 1;
-}
-
-/* Full-width header */
+/* Header */
 header {
     width: 100%;
-    padding: 20px 0;
+    padding: 20px;
     background-color: #333;
     color: white;
     text-align: center;
@@ -53,11 +47,15 @@ nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Home page specific styles */
-#home {
-    text-align: center; /* Ensure text is centered on the home page */
+/* Main Sections */
+section {
+    flex: 1; /* Makes sure this takes up the remaining space */
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
 }
 
+/* Home Section */
 #home h2 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -81,23 +79,13 @@ nav ul li a:hover {
     background-color: #e5533d;
 }
 
-/* About Me Section - Centered Text */
-#about {
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center;     /* Centers content vertically */
-    min-height: 100vh;       /* Makes sure the container takes up at least the full height of the viewport */
-    text-align: center;      /* Ensures text is centered */
-    padding: 40px;
-    background-color: #f9f9f9; /* Optional: change to your desired background */
-}
-
-#about h2 {
+/* About Section */
+#about h2, #contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-#about p {
+#about p, #contact p {
     font-size: 18px;
     margin-bottom: 40px;
     color: #555;
@@ -123,15 +111,15 @@ footer p {
         padding: 10px;
     }
 
-    #about {
+    section {
         padding: 20px;
     }
 
-    #about h2 {
+    #home h2, #about h2, #contact h2 {
         font-size: 28px;
     }
 
-    #about p {
+    #home p, #about p, #contact p {
         font-size: 16px;
     }
 
