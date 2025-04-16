@@ -12,11 +12,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensures the body takes at least full viewport height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Main content will take the remaining space */
 main {
     flex: 1;
+    max-width: 1200px;  /* Prevent the main content from stretching too wide */
+    margin: 0 auto;     /* Center the main content */
 }
 
 /* Full-width header */
@@ -54,6 +57,8 @@ nav ul li a:hover {
 /* Main content section styling */
 section {
     padding: 40px;
+    max-width: 1200px;  /* Prevent section from stretching too wide */
+    margin: 0 auto;     /* Center the section */
 }
 
 /* Home page specific styles */
@@ -98,6 +103,8 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    max-width: 350px;  /* Prevent cards from stretching too wide */
+    margin: 0 auto;    /* Center the cards */
 }
 
 .project-card:hover, .writing-card:hover {
@@ -182,11 +189,11 @@ footer p {
     header {
         padding: 10px;
     }
-    
+
     nav ul {
         display: block;
     }
-    
+
     nav ul li {
         margin-bottom: 10px;
     }
@@ -201,5 +208,28 @@ footer p {
 
     .project-card img, .writing-card img {
         height: 150px;
+    }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1024px) {
+    header {
+        padding: 30px;
+    }
+
+    .projects-grid, .writing-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+
+    .project-card, .writing-card {
+        max-width: 350px;  /* Limit the size of the cards */
+    }
+
+    .projects-grid, .writing-grid {
+        gap: 30px; /* Adjust gap for larger screens */
+    }
+
+    .project-card img, .writing-card img {
+        height: 250px; /* Larger images on wider screens */
     }
 }
