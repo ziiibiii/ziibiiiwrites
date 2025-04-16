@@ -5,14 +5,14 @@ html, body {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Use the Google Font */
+    font-family: 'Poppins', sans-serif; /* Google Font */
 }
 
 /* Flexbox layout to ensure footer stays at the bottom */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes at least full viewport height */
+    min-height: 100vh;
 }
 
 /* Header */
@@ -45,14 +45,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ff6347;
-}
-
-/* Main Sections */
-section {
-    flex: 1; /* Makes sure this takes up the remaining space */
-    text-align: center;
-    padding: 40px;
-    background-color: #f9f9f9;
 }
 
 /* Home Section */
@@ -115,51 +107,36 @@ button:hover, .btn:hover {
 /* Projects and Writing Grid (Centered) */
 .projects-grid, .writing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjusts columns */
+    grid-template-columns: repeat(5, 1fr); /* Ensure 5 items per row */
     gap: 20px;
     padding: 20px 0;
     justify-items: center; /* Centering grid items horizontally */
-    margin: 0 auto; /* Center the grid on the screen */
-    max-width: 1200px; /* Optional: Sets a max-width for the grid */
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-/* Project Cards */
-.project-card, .writing-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    width: 100%; /* Ensure it takes up full width of the grid column */
-    max-width: 300px; /* Optional: Set a max-width for the cards */
+@media (max-width: 1200px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 items in a row */
+    }
 }
 
-.project-card:hover, .writing-card:hover {
-    transform: scale(1.05); /* Hover effect */
+@media (max-width: 992px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items in a row */
+    }
 }
 
-.project-card a, .writing-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    padding: 20px;
+@media (max-width: 768px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items in a row */
+    }
 }
 
-.project-card img, .writing-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-
-.project-card h3, .writing-card h3 {
-    font-size: 22px;
-    margin: 10px 0;
-}
-
-.project-card p, .writing-card p {
-    font-size: 16px;
-    color: #666;
+@media (max-width: 480px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
 }
 
 /* Contact Form Styling */
@@ -175,8 +152,74 @@ button:hover, .btn:hover {
 }
 
 #contact input, #contact textarea {
+    font-family: 'Poppins', sans-serif;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact button {
+    font-family: 'Poppins', sans-serif;
+    padding: 12px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #e5533d;
+}
+
+#contact button:focus {
+    outline: none;
+    border: 2px solid #ff6347;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #home h2, #about h2, #contact h2 {
+        font-size: 28px;
+    }
+
+    #home p, #about p, #contact p {
+        font-size: 16px;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
