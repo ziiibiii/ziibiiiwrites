@@ -86,6 +86,11 @@ section {
     background-color: #e5533d;
 }
 
+/* Ensure buttons styled as links don’t show underlines */
+a.btn {
+    text-decoration: none;
+}
+
 /* Project and Writing Grid */
 .projects-grid, .writing-grid {
     display: grid;
