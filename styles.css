@@ -8,7 +8,24 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Header Styling - This is for the entire site */
+/* Body and Layout for General Pages (Non-Contact) */
+body {
+    display: block;  /* Normal display for all pages except contact */
+    min-height: 100vh;
+    padding-bottom: 100px; /* Make space for footer */
+}
+
+/* Flex Layout for Contact Page */
+#contact {
+    display: flex;  /* Flexbox only for the contact page */
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Header Styling */
 header {
     background-color: #333;
     padding: 20px 0;
@@ -38,13 +55,66 @@ header nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Contact Section - Scoped styles */
-#contact {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+/* Grid Layout for Projects and Writing - Ensure it works everywhere */
+.projects-grid, .writing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
+.project-card, .writing-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover, .writing-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card a, .writing-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 20px;
+}
+
+.project-card img, .writing-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.project-card h3, .writing-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.project-card p, .writing-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    position: relative; /* Make sure it's at the bottom of the page */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Page Only */
 #contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -95,19 +165,6 @@ header nav ul li a:hover {
 
 #contact form button:hover {
     background-color: #e5533d;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;  /* Increased space between form and footer */
-}
-
-footer p {
-    margin: 0;
 }
 
 /* Mobile responsiveness */
