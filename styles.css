@@ -8,7 +8,7 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Header Styling */
+/* Header Styling - This is for the entire site */
 header {
     background-color: #333;
     padding: 20px 0;
@@ -38,7 +38,7 @@ header nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Contact Section */
+/* Contact Section - Scoped styles */
 #contact {
     padding: 60px 20px;
     background-color: #f9f9f9;
@@ -56,7 +56,8 @@ header nav ul li a:hover {
     color: #555;
 }
 
-form {
+/* Form styling */
+#contact form {
     max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
@@ -65,7 +66,8 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form input, form textarea {
+#contact form input, 
+#contact form textarea {
     width: 100%;
     padding: 12px 20px;
     margin-bottom: 20px;
@@ -75,11 +77,11 @@ form input, form textarea {
     box-sizing: border-box;
 }
 
-form textarea {
+#contact form textarea {
     height: 150px;  /* Set a fixed height for the textarea */
 }
 
-form button {
+#contact form button {
     width: 100%;
     padding: 12px 0;
     background-color: #ff6347;
@@ -91,7 +93,7 @@ form button {
     font-size: 18px;
 }
 
-form button:hover {
+#contact form button:hover {
     background-color: #e5533d;
 }
 
@@ -114,16 +116,18 @@ footer p {
         font-size: 28px;
     }
 
-    form {
+    #contact form {
         padding: 20px;
         margin: 0 10px;
     }
 
-    form input, form textarea, form button {
+    #contact form input, 
+    #contact form textarea, 
+    #contact form button {
         font-size: 14px;
     }
 
-    form button {
+    #contact form button {
         padding: 12px;
     }
 }
@@ -134,16 +138,17 @@ footer p {
         padding: 80px 20px;
     }
 
-    form {
+    #contact form {
         max-width: 700px;  /* Increase max width for large screens */
         padding: 40px;
     }
 
-    form input, form textarea {
+    #contact form input, 
+    #contact form textarea {
         font-size: 18px;  /* Larger text fields on large screens */
     }
 
-    form button {
+    #contact form button {
         padding: 14px 0;  /* Larger button on large screens */
     }
 }
