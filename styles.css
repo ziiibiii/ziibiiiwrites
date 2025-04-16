@@ -5,69 +5,93 @@ html, body {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-/* General layout for all pages */
+/* Flexbox layout to ensure footer stays at the bottom */
 body {
-    display: block;  /* Default layout for all pages */
-    padding-bottom: 100px; /* Give space for footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least full viewport height */
 }
 
-/* Header Styling */
+/* Main content will take the remaining space */
+main {
+    flex: 1;
+}
+
+/* Full-width header */
 header {
-    background-color: #333;
+    width: 100%;
     padding: 20px 0;
+    background-color: #333;
+    color: white;
     text-align: center;
 }
 
-header nav ul {
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: center;
 }
 
-header nav ul li {
+nav ul li {
     display: inline-block;
     margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Footer */
-footer {
-    width: 100%;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+/* Main content section styling */
+section {
+    padding: 40px;
+}
+
+/* Home page specific styles */
+#home {
     text-align: center;
-    position: relative;
-    margin-top: auto;
 }
 
-footer p {
-    margin: 0;
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-/* Grid Layout for Projects and Writing */
+#home p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#home .btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#home .btn:hover {
+    background-color: #e5533d;
+}
+
+/* Projects and Writing Grid */
 .projects-grid, .writing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Flexible grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 20px 0;
 }
 
-/* Individual Project and Writing Cards */
 .project-card, .writing-card {
     background-color: #fff;
     border-radius: 10px;
@@ -104,117 +128,78 @@ footer p {
     color: #666;
 }
 
-/* Contact Page Layout */
-#contact {
-    display: flex;  /* Flexbox only for the contact page */
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+/* Project and Writing Page Details */
+.project-details, .writing-details {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Page Styling */
-#contact h2 {
+.project-details h2, .writing-details h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-#contact p {
+.project-details p, .writing-details p {
     font-size: 18px;
-    margin-bottom: 40px;
-    color: #555;
+    line-height: 1.8;
+    color: #444;
 }
 
-/* Contact Form Styling */
-#contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#contact form input, 
-#contact form textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-#contact form textarea {
-    height: 150px;  /* Set a fixed height for the textarea */
-}
-
-#contact form button {
-    width: 100%;
-    padding: 12px 0;
+.project-details .back-to-projects, .writing-details .back-to-writing {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
     background-color: #ff6347;
     color: white;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 18px;
 }
 
-#contact form button:hover {
+.project-details .back-to-projects:hover, .writing-details .back-to-writing:hover {
     background-color: #e5533d;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    /* Adjust grid for smaller screens */
+    header {
+        padding: 10px;
+    }
+    
+    nav ul {
+        display: block;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
     .projects-grid, .writing-grid {
-        grid-template-columns: 1fr;  /* Stack cards vertically */
+        grid-template-columns: 1fr; /* Single column for smaller screens */
     }
 
-    #contact h2 {
-        font-size: 28px;
+    .project-card, .writing-card {
+        margin-bottom: 20px;
     }
 
-    #contact form {
-        padding: 20px;
-        margin: 0 10px;
-    }
-
-    #contact form input, 
-    #contact form textarea, 
-    #contact form button {
-        font-size: 14px;
-    }
-
-    #contact form button {
-        padding: 12px;
-    }
-}
-
-/* Large screen adjustments */
-@media (min-width: 1024px) {
-    .projects-grid, .writing-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* More space for large screens */
-    }
-
-    #contact {
-        padding: 80px 20px;
-    }
-
-    #contact form {
-        max-width: 700px;  /* Increase max width for large screens */
-        padding: 40px;
-    }
-
-    #contact form input, 
-    #contact form textarea {
-        font-size: 18px;
-    }
-
-    #contact form button {
-        padding: 14px 0;
+    .project-card img, .writing-card img {
+        height: 150px;
     }
 }
