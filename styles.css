@@ -72,26 +72,30 @@ section p {
 
 /* Styling for projects-grid */
 #projects .projects-grid {
-    display: flex; /* Switch to flexbox for centering */
-    flex-wrap: wrap; /* Ensures items wrap to new rows */
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
     justify-content: center; /* Horizontally centers all items */
     align-items: center; /* Vertically aligns items */
     gap: 20px; /* Adds space between cards */
     margin: 0 auto; /* Centers the grid container */
     width: 100%;
-    max-width: 1200px; /* Optional: restrict the grid width */
+    max-width: 1200px; /* Optionally restrict the container width */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures items stay on a single line */
 }
 
 /* Styling for writing-grid */
 #writing .writing-grid {
-    display: flex; /* Switch to flexbox for centering */
-    flex-wrap: wrap; /* Ensures items wrap to new rows */
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
     justify-content: center; /* Horizontally centers all items */
     align-items: center; /* Vertically aligns items */
     gap: 20px; /* Adds space between cards */
     margin: 0 auto; /* Centers the grid container */
     width: 100%;
-    max-width: 1200px; /* Optional: restrict the grid width */
+    max-width: 1200px; /* Optionally restrict the container width */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures items stay on a single line */
 }
 
 /* Styling for project and writing cards */
