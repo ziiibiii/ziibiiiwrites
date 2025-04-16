@@ -90,13 +90,10 @@ section {
 /* Project and Writing Grid */
 .projects-grid, .writing-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Ensure 5 items per row */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures responsive grid */
     gap: 20px;
     padding: 20px 0;
     justify-items: center; /* Center items in grid */
-    max-width: 100%; /* Ensure full container width */
-    margin: 0 auto;  /* Center the grid container */
-    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .project-card, .writing-card {
@@ -216,6 +213,24 @@ section {
     border: none; /* Remove any focus outline */
 }
 
+/* Ensure consistent font on all buttons */
+button, .btn {
+    font-family: 'Poppins', sans-serif;  /* Ensure this matches the font you want */
+    font-size: 16px;                      /* Ensure font size is consistent */
+    font-weight: bold;                    /* Optional: ensure bold weight */
+    padding: 10px 20px;                   /* Ensure consistent padding */
+    background-color: #ff6347;            /* Background color */
+    color: white;                         /* Text color */
+    border-radius: 5px;                   /* Rounded corners */
+    border: none;                         /* No border */
+    cursor: pointer;                     /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+button:hover, .btn:hover {
+    background-color: #e5533d;            /* Darken background on hover */
+}
+
 /* Footer */
 footer {
     width: 100%;
@@ -231,17 +246,7 @@ footer p {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 1024px) {
-    .projects-grid, .writing-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 items per row on smaller screens */
-    }
-}
-
 @media (max-width: 768px) {
-    .projects-grid, .writing-grid {
-        grid-template-columns: 1fr; /* 1 item per row on mobile screens */
-    }
-
     header {
         padding: 10px;
     }
@@ -265,20 +270,8 @@ footer p {
     nav ul li {
         margin-bottom: 10px;
     }
-}
 
-/* Apply button styles to "Get in touch" link */
-#get-in-touch {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-#get-in-touch:hover {
-    background-color: #e5533d;
+    .projects-grid, .writing-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
 }
