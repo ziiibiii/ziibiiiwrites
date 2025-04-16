@@ -67,15 +67,36 @@ section {
 }
 
 #home .btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #ff6347;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 #home .btn:hover {
+    background-color: #e5533d;
+}
+
+/* Button Styling for All Pages */
+button, .btn {
+    padding: 12px 25px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
     background-color: #e5533d;
 }
 
@@ -91,16 +112,18 @@ section {
     color: #555;
 }
 
-/* Projects and Writing Grid (Fixed) */
+/* Projects and Writing Grid (Centered) */
 .projects-grid, .writing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjusts columns */
     gap: 20px;
     padding: 20px 0;
-    text-align: left;
-    justify-items: center; /* Centers grid items within the columns */
+    justify-items: center; /* Centering grid items horizontally */
+    margin: 0 auto; /* Center the grid on the screen */
+    max-width: 1200px; /* Optional: Sets a max-width for the grid */
 }
 
+/* Project Cards */
 .project-card, .writing-card {
     background-color: #fff;
     border-radius: 10px;
@@ -108,6 +131,7 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     width: 100%; /* Ensure it takes up full width of the grid column */
+    max-width: 300px; /* Optional: Set a max-width for the cards */
 }
 
 .project-card:hover, .writing-card:hover {
@@ -156,69 +180,3 @@ section {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    width: 100%;
-}
-
-#contact button {
-    padding: 12px;
-    background-color: #ff6347;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#contact button:hover {
-    background-color: #e5533d;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    margin-top: auto; /* Ensures footer stays at the bottom */
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    #home h2, #about h2, #contact h2 {
-        font-size: 28px;
-    }
-
-    #home p, #about p, #contact p {
-        font-size: 16px;
-    }
-
-    nav ul {
-        display: block;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .projects-grid, .writing-grid {
-        grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    }
-
-    .project-card img, .writing-card img {
-        height: 150px; /* Adjust image height for smaller screens */
-    }
-}
