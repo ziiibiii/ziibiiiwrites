@@ -193,31 +193,11 @@ section {
     resize: none;
 }
 
-#contact form button {
-    padding: 12px 25px;
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact form button:hover {
-    background-color: #e5533d;
-}
-
-#contact form button:focus {
-    outline: none;
-    border: none; /* Remove any focus outline */
-}
-
 /* Ensure consistent font on all buttons */
 button, .btn {
     font-family: 'Poppins', sans-serif;  /* Ensure this matches the font you want */
     font-size: 16px;                      /* Ensure font size is consistent */
-    font-weight: bold;                    /* Optional: ensure bold weight */
+    font-weight: bold;                    /* Ensure bold weight for consistency */
     padding: 10px 20px;                   /* Ensure consistent padding */
     background-color: #ff6347;            /* Background color */
     color: white;                         /* Text color */
@@ -229,6 +209,12 @@ button, .btn {
 
 button:hover, .btn:hover {
     background-color: #e5533d;            /* Darken background on hover */
+}
+
+/* Specific styling for "Send Message" button */
+#contact form button[type="submit"] {
+    font-family: 'Poppins', sans-serif;  /* Inherit font-family */
+    font-weight: bold;                   /* Ensure the font is bold */
 }
 
 /* Footer */
