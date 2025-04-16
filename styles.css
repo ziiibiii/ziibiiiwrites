@@ -8,36 +8,10 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body Layout (For Home, About, Projects, etc.) */
+/* General layout for all pages */
 body {
-    display: block;  /* Default layout for all pages except contact */
-    min-height: 100vh;
-    padding-bottom: 100px; /* Ensures footer is always visible */
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    position: relative; /* Ensure it stays at the bottom */
-    margin-top: auto;  /* Ensures footer stays at the bottom of the page */
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Contact Page Layout */
-#contact {
-    display: flex;  /* Flexbox only for the contact page */
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+    display: block;  /* Default layout for all pages */
+    padding-bottom: 100px; /* Give space for footer */
 }
 
 /* Header Styling */
@@ -70,14 +44,30 @@ header nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Grid Layout for Projects and Writing - Ensuring cards are displayed as grid, not a list */
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Grid Layout for Projects and Writing */
 .projects-grid, .writing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Ensure a responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Flexible grid */
     gap: 20px;
     padding: 20px;
 }
 
+/* Individual Project and Writing Cards */
 .project-card, .writing-card {
     background-color: #fff;
     border-radius: 10px;
@@ -114,6 +104,16 @@ header nav ul li a:hover {
     color: #666;
 }
 
+/* Contact Page Layout */
+#contact {
+    display: flex;  /* Flexbox only for the contact page */
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
 /* Contact Page Styling */
 #contact h2 {
     font-size: 36px;
@@ -126,7 +126,7 @@ header nav ul li a:hover {
     color: #555;
 }
 
-/* Form styling */
+/* Contact Form Styling */
 #contact form {
     max-width: 600px;
     margin: 0 auto;
@@ -169,6 +169,11 @@ header nav ul li a:hover {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+    /* Adjust grid for smaller screens */
+    .projects-grid, .writing-grid {
+        grid-template-columns: 1fr;  /* Stack cards vertically */
+    }
+
     #contact h2 {
         font-size: 28px;
     }
@@ -191,6 +196,10 @@ header nav ul li a:hover {
 
 /* Large screen adjustments */
 @media (min-width: 1024px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* More space for large screens */
+    }
+
     #contact {
         padding: 80px 20px;
     }
@@ -202,10 +211,10 @@ header nav ul li a:hover {
 
     #contact form input, 
     #contact form textarea {
-        font-size: 18px;  /* Larger text fields on large screens */
+        font-size: 18px;
     }
 
     #contact form button {
-        padding: 14px 0;  /* Larger button on large screens */
+        padding: 14px 0;
     }
 }
