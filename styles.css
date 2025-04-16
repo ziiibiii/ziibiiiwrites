@@ -266,3 +266,19 @@ footer p {
         margin-bottom: 10px;
     }
 }
+
+/* Apply button styles to "Get in Touch" link */
+#get-in-touch {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#get-in-touch:hover {
+    background-color: #e5533d;
+}
