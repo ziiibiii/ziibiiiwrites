@@ -5,179 +5,103 @@ html, body {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Flexbox layout to ensure footer stays at the bottom */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes at least full viewport height */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-/* Main content will take the remaining space */
-main {
-    flex: 1;
-    max-width: 1200px;  /* Prevent the main content from stretching too wide */
-    margin: 0 auto;     /* Center the main content */
-}
-
-/* Full-width header */
+/* Header Styling */
 header {
-    width: 100%;
-    padding: 20px 0;
     background-color: #333;
-    color: white;
+    padding: 20px 0;
     text-align: center;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: center;
 }
 
-nav ul li {
+header nav ul li {
     display: inline-block;
     margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Main content section styling */
-section {
-    padding: 40px;
-    max-width: 1200px;  /* Prevent section from stretching too wide */
-    margin: 0 auto;     /* Center the section */
-}
-
-/* Home page specific styles */
-#home {
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
-#home h2 {
+#contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-#home p {
+#contact p {
     font-size: 18px;
     margin-bottom: 40px;
+    color: #555;
 }
 
-#home .btn {
-    padding: 10px 20px;
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 150px;  /* Set a fixed height for the textarea */
+}
+
+form button {
+    width: 100%;
+    padding: 12px 0;
     background-color: #ff6347;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
     font-weight: bold;
-}
-
-#home .btn:hover {
-    background-color: #e5533d;
-}
-
-/* Projects and Writing Grid */
-.projects-grid, .writing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.project-card, .writing-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    max-width: 350px;  /* Prevent cards from stretching too wide */
-    margin: 0 auto;    /* Center the cards */
-}
-
-.project-card:hover, .writing-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card a, .writing-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    padding: 20px;
-}
-
-.project-card img, .writing-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-
-.project-card h3, .writing-card h3 {
-    font-size: 22px;
-    margin: 10px 0;
-}
-
-.project-card p, .writing-card p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Project and Writing Page Details */
-.project-details, .writing-details {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.project-details h2, .writing-details h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.project-details p, .writing-details p {
+    cursor: pointer;
     font-size: 18px;
-    line-height: 1.8;
-    color: #444;
 }
 
-.project-details .back-to-projects, .writing-details .back-to-writing {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.project-details .back-to-projects:hover, .writing-details .back-to-writing:hover {
+form button:hover {
     background-color: #e5533d;
 }
 
 /* Footer */
 footer {
-    width: 100%;
-    padding: 20px;
     background-color: #333;
     color: white;
     text-align: center;
-    margin-top: auto; /* Ensures footer stays at the bottom */
+    padding: 20px;
+    margin-top: 40px;  /* Increased space between form and footer */
 }
 
 footer p {
@@ -186,50 +110,40 @@ footer p {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    header {
-        padding: 10px;
+    #contact h2 {
+        font-size: 28px;
     }
 
-    nav ul {
-        display: block;
+    form {
+        padding: 20px;
+        margin: 0 10px;
     }
 
-    nav ul li {
-        margin-bottom: 10px;
+    form input, form textarea, form button {
+        font-size: 14px;
     }
 
-    .projects-grid, .writing-grid {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-    }
-
-    .project-card, .writing-card {
-        margin-bottom: 20px;
-    }
-
-    .project-card img, .writing-card img {
-        height: 150px;
+    form button {
+        padding: 12px;
     }
 }
 
 /* Large screen adjustments */
 @media (min-width: 1024px) {
-    header {
-        padding: 30px;
+    #contact {
+        padding: 80px 20px;
     }
 
-    .projects-grid, .writing-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    form {
+        max-width: 700px;  /* Increase max width for large screens */
+        padding: 40px;
     }
 
-    .project-card, .writing-card {
-        max-width: 350px;  /* Limit the size of the cards */
+    form input, form textarea {
+        font-size: 18px;  /* Larger text fields on large screens */
     }
 
-    .projects-grid, .writing-grid {
-        gap: 30px; /* Adjust gap for larger screens */
-    }
-
-    .project-card img, .writing-card img {
-        height: 250px; /* Larger images on wider screens */
+    form button {
+        padding: 14px 0;  /* Larger button on large screens */
     }
 }
