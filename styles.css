@@ -51,132 +51,6 @@ nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Main content section styling */
-section {
-    padding: 40px;
-}
-
-/* Home page specific styles */
-#home {
-    text-align: center;
-}
-
-#home h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#home p {
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-#home .btn {
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-#home .btn:hover {
-    background-color: #e5533d;
-}
-
-/* Projects and Writing Grid */
-.projects-grid, .writing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.project-card, .writing-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover, .writing-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card a, .writing-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    padding: 20px;
-}
-
-.project-card img, .writing-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-
-.project-card h3, .writing-card h3 {
-    font-size: 22px;
-    margin: 10px 0;
-}
-
-.project-card p, .writing-card p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Project and Writing Page Details */
-.project-details, .writing-details {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.project-details h2, .writing-details h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.project-details p, .writing-details p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #444;
-}
-
-.project-details .back-to-projects, .writing-details .back-to-writing {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.project-details .back-to-projects:hover, .writing-details .back-to-writing:hover {
-    background-color: #e5533d;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    margin-top: auto; /* Ensures footer stays at the bottom */
-}
-
-footer p {
-    margin: 0;
-}
-
 /* About Me Section - Centered Text */
 #about {
     display: flex;
@@ -199,12 +73,26 @@ footer p {
     color: #555;
 }
 
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     header {
         padding: 10px;
     }
-    
+
     #about {
         padding: 20px;
     }
@@ -223,17 +111,5 @@ footer p {
 
     nav ul li {
         margin-bottom: 10px;
-    }
-
-    .projects-grid, .writing-grid {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-    }
-
-    .project-card, .writing-card {
-        margin-bottom: 20px;
-    }
-
-    .project-card img, .writing-card img {
-        height: 150px;
     }
 }
