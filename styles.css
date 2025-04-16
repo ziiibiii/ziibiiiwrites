@@ -94,6 +94,8 @@ section {
     gap: 20px;
     padding: 20px 0;
     justify-items: center; /* Center items in grid */
+    max-width: 1200px; /* Add max-width for control */
+    margin: 0 auto;  /* Center the grid container */
 }
 
 .project-card, .writing-card {
