@@ -55,6 +55,7 @@ nav ul li a:hover {
 /* Main content section styling */
 section {
     padding: 40px;
+    text-align: center;
 }
 
 /* Home page specific styles */
