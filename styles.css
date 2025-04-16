@@ -61,6 +61,7 @@ section {
 /* Center-align paragraph text inside sections */
 section p {
     text-align: center;
+    display: block; /* For Edge compatibility */
 }
 
 /* Home page specific styles */
