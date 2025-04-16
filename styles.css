@@ -58,6 +58,11 @@ section {
     text-align: center;
 }
 
+/* Center-align paragraph text inside sections */
+section p {
+    text-align: center;
+}
+
 /* Home page specific styles */
 #home {
     text-align: center;
