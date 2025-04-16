@@ -103,11 +103,11 @@ a.btn {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px;
-    justify-items: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically */
-    margin: 0 auto; /* Centers the grid itself */
-    padding: 0;
+    justify-content: center; /* Ensures the entire grid is centered */
+    align-items: start;
+    margin: 0 auto; /* Centers the grid container */
     width: 100%; /* Ensure full-width layout */
+    max-width: 1200px; /* Optional: limits the grid width */
     text-align: unset; /* Clears inherited text alignment */
     box-sizing: border-box; /* Prevents sizing issues */
 }
