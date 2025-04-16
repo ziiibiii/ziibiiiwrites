@@ -102,7 +102,8 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    width: 100%; /* Ensure cards take full width */
+    max-width: 300px; /* Ensure uniform card width */
+    margin: 0 auto; /* Center each card individually */
 }
 
 .project-card:hover, .writing-card:hover {
@@ -195,26 +196,26 @@ section {
 
 /* Ensure consistent font on all buttons */
 button, .btn {
-    font-family: 'Poppins', sans-serif;  /* Ensure this matches the font you want */
-    font-size: 16px;                      /* Ensure font size is consistent */
-    font-weight: bold;                    /* Ensure bold weight for consistency */
-    padding: 10px 20px;                   /* Ensure consistent padding */
-    background-color: #ff6347;            /* Background color */
-    color: white;                         /* Text color */
-    border-radius: 5px;                   /* Rounded corners */
-    border: none;                         /* No border */
-    cursor: pointer;                     /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover, .btn:hover {
-    background-color: #e5533d;            /* Darken background on hover */
+    background-color: #e5533d;
 }
 
 /* Specific styling for "Send Message" button */
 #contact form button[type="submit"] {
-    font-family: 'Poppins', sans-serif;  /* Inherit font-family */
-    font-weight: bold;                   /* Ensure the font is bold */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 /* Footer */
