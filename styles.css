@@ -95,7 +95,6 @@ section {
     padding: 20px 0;
     justify-items: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
-    text-align: center; /* Override inherited body styles */
     margin: 0 auto; /* Center the container itself */
     width: 100%; /* Ensure the container spans the available space */
 }
