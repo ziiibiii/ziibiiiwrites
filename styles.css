@@ -79,7 +79,7 @@ section p {
     gap: 20px; /* Adds space between cards */
     margin: 0 auto; /* Centers the grid container */
     width: 100%;
-    max-width: 1800px; /* Optionally restrict the container width */
+    max-width: auto; /* Optionally restrict the container width */
     overflow-x: auto; /* Enables horizontal scrolling */
     white-space: normal; /* Ensures items stay on a single line */
 }
