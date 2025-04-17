@@ -79,7 +79,7 @@ section p {
     gap: 20px; /* Adds space between cards */
     margin: 0 auto; /* Centers the grid container */
     width: 100%;
-    max-width: 1200px; /* Optionally restrict the container width */
+    max-width: auto; /* Optionally restrict the container width */
     overflow-x: auto; /* Enables horizontal scrolling */
     white-space: normal; /* Ensures items stay on a single line */
 }
@@ -93,7 +93,7 @@ section p {
     gap: 20px; /* Adds space between cards */
     margin: 0 auto; /* Centers the grid container */
     width: 100%;
-    max-width: 1200px; /* Optionally restrict the container width */
+    max-width: auto; /* Optionally restrict the container width */
     overflow-x: auto; /* Enables horizontal scrolling */
     white-space: normal; /* Ensures items stay on a single line */
 }
@@ -105,7 +105,7 @@ section p {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    max-width: 300px;
+    max-width: auto;
     text-align: center;
     margin: 20px; /* Adds spacing around each card */
 }
