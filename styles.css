@@ -1,57 +1,3 @@
-/* General Reset */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Flexbox layout to ensure footer stays at the bottom */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Main content will take the remaining space */
-main {
-    flex: 1;
-}
-
-/* Full-width header */
-header {
-    width: 100%;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #ff6347;
-}
-
 /* About Section */
 #about {
     padding: 40px;
@@ -62,68 +8,41 @@ nav ul li a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure text is left-aligned */
-#about h2, #about p, #about .skills, #about .tools, #about .experience {
+/* Ensure titles are left-aligned */
+#about h2, #about h3 {
     text-align: left;
-    margin-left: 20px; /* Adds some spacing from the edge */
+    margin-left: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
-/* Remove bullet points */
-#about .skills, #about .tools, #about .experience {
+/* Ensure paragraph text is left-aligned */
+#about p {
+    text-align: left;
+    margin-left: 20px;
     font-size: 18px;
-    margin-top: 10px;
+    color: #555;
 }
 
-#about .skills span, #about .tools span, #about .experience span {
-    display: block;
+/* Skills & Tools Lists */
+#about .skills, #about .tools, #about .experience {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px; /* Adds space between sections */
+}
+
+#about .skills ul, #about .tools ul, #about .experience ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+#about .skills ul li, #about .tools ul li, #about .experience ul li {
+    font-size: 18px;
     padding: 5px 0; /* Adds slight spacing between each skill/tool */
 }
 
-/* Technologies & Tools Section */
-.tech-icons {
-    display: flex;
-    justify-content: left;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.tech-icons img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-/* Call to Action Button */
-#about .btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#about .btn:hover {
-    background-color: #e5533d;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    #about {
-        padding: 20px;
-    }
-
-    #about h2 {
-        font-size: 28px;
-    }
-
-    #about p {
-        font-size: 16px;
-    }
-
-    #about .skills span, #about .tools span, #about .experience span {
-        font-size: 16px;
-    }
+/* Extra spacing before button */
+#about .cta-container {
+    margin-top: 30px;
 }
