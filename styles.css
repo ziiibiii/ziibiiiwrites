@@ -81,7 +81,7 @@ section p {
     width: 100%;
     max-width: 1200px; /* Optionally restrict the container width */
     overflow-x: auto; /* Enables horizontal scrolling */
-    white-space: nowrap; /* Ensures items stay on a single line */
+    white-space: normal; /* Ensures items stay on a single line */
 }
 
 /* Styling for writing-grid */
@@ -95,7 +95,7 @@ section p {
     width: 100%;
     max-width: 1200px; /* Optionally restrict the container width */
     overflow-x: auto; /* Enables horizontal scrolling */
-    white-space: nowrap; /* Ensures items stay on a single line */
+    white-space: normal; /* Ensures items stay on a single line */
 }
 
 /* Styling for project and writing cards */
