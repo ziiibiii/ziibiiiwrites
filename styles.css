@@ -66,36 +66,36 @@ section p {
 
 /* Ensure proper layout for #projects and #writing sections */
 #projects, #writing {
-    display: block;
+    display: block; /* Ensures sections are treated as block-level elements */
     width: 100%;
 }
 
 /* Styling for projects-grid */
 #projects .projects-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 0 auto;
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    justify-content: center; /* Horizontally centers all items */
+    align-items: center; /* Vertically aligns items */
+    gap: 20px; /* Adds space between cards */
+    margin: 0 auto; /* Centers the grid container */
     width: 100%;
-    max-width: auto;
-    overflow-x: auto;
-    white-space: normal;
+    max-width: auto; /* Optionally restrict the container width */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: normal; /* Ensures items stay on a single line */
 }
 
 /* Styling for writing-grid */
 #writing .writing-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 0 auto;
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    justify-content: center; /* Horizontally centers all items */
+    align-items: center; /* Vertically aligns items */
+    gap: 20px; /* Adds space between cards */
+    margin: 0 auto; /* Centers the grid container */
     width: 100%;
-    max-width: auto;
-    overflow-x: auto;
-    white-space: normal;
+    max-width: auto; /* Optionally restrict the container width */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: normal; /* Ensures items stay on a single line */
 }
 
 /* Styling for project and writing cards */
@@ -107,7 +107,7 @@ section p {
     transition: transform 0.3s ease;
     max-width: auto;
     text-align: center;
-    margin: 20px;
+    margin: 20px; /* Adds spacing around each card */
 }
 
 /* Hover effect for project and writing cards */
@@ -158,7 +158,7 @@ section p {
     padding: 10px 20px;
     background-color: #ff6347;
     color: white;
-    text-decoration: none !important;
+    text-decoration: none !important; /* Removes underline */
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
@@ -181,7 +181,7 @@ a.btn {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Ensures consistent layout */
     margin: 0 auto;
 }
 
@@ -217,7 +217,7 @@ button, .btn {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    text-decoration: none !important;
+    text-decoration: none !important; /* Removes underline */
     display: inline-block;
     transition: background-color 0.3s ease;
 }
@@ -227,7 +227,7 @@ button:hover, .btn:hover {
 }
 
 button:focus, .btn:focus {
-    text-decoration: none !important;
+    text-decoration: none !important; /* Prevents underline on focus */
 }
 
 /* Footer */
@@ -271,6 +271,6 @@ footer p {
     }
 
     .projects-grid, .writing-grid {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Ensures proper layout on smaller screens */
     }
 }
