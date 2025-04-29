@@ -186,35 +186,6 @@ footer p {
     padding: 10px;
 }
 
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-    .project-item, .writing-item {
-        width: 100%;
-        padding: 15px;
-    }
-
-    #about h1, #about h3 {
-        font-size: 22px;
-    }
-
-    #about p {
-        font-size: 16px;
-    }
-
-    #about .skills p, #about .tools p, #about .experience p {
-        font-size: 16px;
-    }
-
-    .contact-form {
-        padding: 15px;
-    }
-
-    .btn {
-        font-size: 18px;
-        padding: 12px 18px;
-    }
-}
-
 /* Contact Form Styling */
 #contact {
     display: flex;
