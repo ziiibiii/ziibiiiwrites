@@ -18,6 +18,12 @@ body {
 /* Main content will take the remaining space */
 main {
     flex: 1;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    flex-direction: column;
+    text-align: center;       /* Ensure text is centered */
+    padding: 20px;
 }
 
 /* Full-width header */
@@ -62,15 +68,15 @@ nav ul li a:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure titles are left-aligned */
+/* Ensure titles are centered */
 #about h1, #about h3 {
-    text-align: left;
-    margin-left: 20px;
+    text-align: center;  /* Centered title */
+    margin: 0 auto;
     font-size: 24px;
     color: #333;
 }
 
-/* Ensure paragraph text is left-aligned */
+/* Ensure paragraph text is left-aligned but within the centered container */
 #about p {
     text-align: left;
     margin-left: 20px;
@@ -96,7 +102,9 @@ nav ul li a:hover {
 }
 
 .cta-container {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 /* Button styling */
