@@ -30,3 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('writingPrev').addEventListener('click', () => moveWritingCarousel(-1));
     document.getElementById('writingNext').addEventListener('click', () => moveWritingCarousel(1));
 });
+
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
