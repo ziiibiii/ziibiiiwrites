@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('writingNext').addEventListener('click', () => moveWritingCarousel(1));
 });
 
+// Ensure page reloads when navigating back
 window.onpageshow = function(event) {
     if (event.persisted) {
         window.location.reload();
