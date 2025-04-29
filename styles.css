@@ -6,14 +6,19 @@ html, body {
     line-height: 1.6;
     background-color: #f0f0f0;
     color: #333;
-}
-
-/* Body Styling - Center Content and Flexbox Layout */
-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f4f4f4;
+}
+
+/* Body Content: Centering */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
 }
 
 /* Full-width Header */
@@ -53,17 +58,7 @@ nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Main Content Area */
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-/* General Section Styles */
+/* Section Styling */
 section {
     width: 80%;
     margin: 0 auto;
@@ -136,6 +131,9 @@ footer {
     color: white;
     padding: 40px 0;
     text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 /* Footer Text */
@@ -144,12 +142,23 @@ footer p {
     font-size: 16px;
 }
 
+/* Ensure Footer Stays at the Bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
 /* Projects and Writings - Horizontal Grid */
 .projects, .writings {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .project-item, .writing-item {
@@ -174,7 +183,7 @@ footer p {
     border-radius: 8px;
 }
 
-/* Media Queries */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
     .project-item, .writing-item {
         width: 100%;
@@ -203,6 +212,7 @@ footer p {
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .contact-form input, .contact-form textarea {
