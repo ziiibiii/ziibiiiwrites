@@ -37,3 +37,18 @@ window.onpageshow = function(event) {
         window.location.reload();
     }
 };
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the current timestamp
+        var timestamp = new Date().getTime();
+
+        // Get the stylesheet and script elements
+        var stylesheet = document.getElementById('stylesheet');
+        var script = document.getElementById('script');
+
+        // Append the timestamp as a query parameter to the href and src attributes
+        stylesheet.href = 'styles.css?v=' + timestamp;
+        script.src = 'scripts.js?v=' + timestamp;
+    });
+</script>
