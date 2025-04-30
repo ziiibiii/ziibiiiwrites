@@ -62,9 +62,11 @@ header nav ul li a {
     display: inline-block;
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -74,13 +76,12 @@ header nav ul li a {
 /* Grid Layout for Projects and Writings */
 .projects-grid, .writing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
     gap: 20px;
     padding: 20px;
     justify-content: center;
 }
 
-/* Card styles for Projects and Writings */
 .project-card, .writing-card {
     background-color: #fff;
     border-radius: 10px;
@@ -107,22 +108,31 @@ header nav ul li a {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .about-text, .contact-form {
-        width: 80%;
-    }
-
+@media (max-width: 1200px) {
     .projects-grid, .writing-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
     }
 }
 
 @media (max-width: 480px) {
     .projects-grid, .writing-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 item per row on mobile */
     }
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
