@@ -1,197 +1,132 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Normalize Styles - Adding base reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-/* Header Styling */
-header {
+/* Body and general elements */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header nav ul {
+    display: flex;
+    justify-content: center;
     background-color: #333;
-    color: #fff;
     padding: 10px 0;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
 header nav ul li {
-    margin: 0 20px;
+    list-style-type: none;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: #fff;
+/* Section styling for home, about, contact */
+#home {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* Homepage Specific Styles */
-#homepage {
-    padding: 20px;
-}
-
-#homepage h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#homepage p {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-#homepage .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-}
-
-#homepage .btn:hover {
-    background-color: #555;
-}
-
-/* About, Contact, Projects, and Writings Grids */
-section {
-    padding: 40px 20px;
+    padding: 100px 20px;
+    background-color: #eaeaea;
 }
 
 #about, #contact {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: left;
 }
 
-/* Grid layout for Projects and Writings */
+.about-container, .contact-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* For about and contact pages, ensuring content is centered */
+.about-text, .contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Ensuring buttons and links are styled properly */
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Grid Layout for Projects and Writings */
 .projects-grid, .writing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
 }
 
+/* Card styles for Projects and Writings */
 .project-card, .writing-card {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    text-align: center;
 }
 
 .project-card img, .writing-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
+    border-bottom: 1px solid #ddd;
 }
 
 .project-card h3, .writing-card h3 {
+    padding: 15px 10px;
     font-size: 1.2rem;
-    margin: 10px;
 }
 
 .project-card p, .writing-card p {
-    margin: 10px;
-    font-size: 1rem;
-    color: #555;
+    padding: 0 10px 15px;
+    color: #666;
 }
 
-.project-card:hover, .writing-card:hover {
-    transform: translateY(-10px);
-}
-
-/* Ensure the sections are styled with good spacing */
-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-section p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* General Layout Adjustments */
-#projects, #writing {
-    margin-top: 40px;
-}
-
-/* Form Elements in Contact */
-form label {
-    display: block;
-    margin: 10px 0;
-    font-weight: 500;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-text, .contact-form {
+        width: 80%;
     }
 
     .projects-grid, .writing-grid {
         grid-template-columns: 1fr 1fr;
     }
+}
 
-    .project-card, .writing-card {
-        max-width: 100%;
+@media (max-width: 480px) {
+    .projects-grid, .writing-grid {
+        grid-template-columns: 1fr;
     }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
 }
