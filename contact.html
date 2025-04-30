@@ -25,21 +25,23 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to collaborate, discuss a project, or just say hello, feel free to reach out!</p>
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <p>If you'd like to collaborate, discuss a project, or just say hello, feel free to reach out!</p>
 
-        <form action="#" method="POST" aria-labelledby="contact-form">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <form action="#" method="POST" aria-labelledby="contact-form" class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -47,8 +49,6 @@
         <p>&copy; 2025 ZB. All rights reserved.</p>
     </footer>
 
-<!-- JavaScript file reference should be placed just before the closing </body> -->
     <script src="scripts.js"></script>
-    
 </body>
 </html>
