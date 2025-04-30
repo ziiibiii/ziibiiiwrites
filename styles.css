@@ -15,15 +15,13 @@ body {
     min-height: 100vh;
 }
 
-/* Center content on Home, About, and Contact pages */
+/* Center layout on home, about, and contact pages */
 #home, #about, #contact {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 /* Full-width header */
@@ -68,6 +66,117 @@ footer {
     margin-top: auto;
 }
 
+/* Home Page Styles */
+#home h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+#home p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+/* About Page Layout */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text h1, 
+.about-text h3, 
+.about-text p {
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* Contact Page Layout */
+.contact-content {
+    max-width: 600px;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-content h2,
+.contact-content p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e5533d;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
+
 /* Projects and Writings - Horizontal Grid */
 .projects, .writings {
     display: flex;
@@ -92,84 +201,6 @@ footer {
     border-radius: 8px;
 }
 
-/* About and Contact Section boxes */
-#about, #contact {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    max-width: 800px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Text styling inside About and Contact */
-#about h1, #about h3, #contact h2 {
-    text-align: left;
-    font-size: 24px;
-    color: #333;
-}
-
-#about p, #contact p {
-    text-align: left;
-    font-size: 18px;
-    color: #555;
-}
-
-/* Contact form styling */
-.contact-form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #e5533d;
-}
-
-/* Button styling */
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #e5533d;
-    transform: scale(1.05); /* Slight scale effect */
-}
-
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .project-item, .writing-item {
@@ -177,20 +208,12 @@ footer {
         padding: 15px;
     }
 
-    #about h1, #about h3 {
-        font-size: 22px;
+    .about-container {
+        padding: 20px;
     }
 
-    #about p {
-        font-size: 16px;
-    }
-
-    #about .skills p, #about .tools p, #about .experience p {
-        font-size: 16px;
-    }
-
-    .contact-form {
-        padding: 15px;
+    .contact-content {
+        padding: 20px;
     }
 
     .btn {
