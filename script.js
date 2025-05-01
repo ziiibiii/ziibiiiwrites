@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Project carousel navigation
     let currentIndex = 0;
     const projectCarousel = document.getElementById('projectCarousel');
     const writingCarousel = document.getElementById('writingCarousel');
@@ -29,6 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('writingPrev').addEventListener('click', () => moveWritingCarousel(-1));
     document.getElementById('writingNext').addEventListener('click', () => moveWritingCarousel(1));
+
+    // Cache busting for CSS and JS
+    var timestamp = new Date().getTime(); // Get the current timestamp
+
+    var stylesheet = document.getElementById('stylesheet'); // Get the stylesheet link
+    if (stylesheet) {
+        stylesheet.href = 'styles.css?v=' + timestamp;  // Append timestamp to CSS link
+    }
+
+    var script = document.querySelector('script[src="scripts.js"]'); // Get the script tag
+    if (script) {
+        script.src = 'scripts.js?v=' + timestamp;  // Append timestamp to script link
+    }
 });
 
 // Ensure page reloads when navigating back
@@ -37,18 +51,3 @@ window.onpageshow = function(event) {
         window.location.reload();
     }
 };
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get the current timestamp
-        var timestamp = new Date().getTime();
-
-        // Get the stylesheet and script elements
-        var stylesheet = document.getElementById('stylesheet');
-        var script = document.getElementById('script');
-
-        // Append the timestamp as a query parameter to the href and src attributes
-        stylesheet.href = 'styles.css?v=' + timestamp;
-        script.src = 'scripts.js?v=' + timestamp;
-    });
-</script>
